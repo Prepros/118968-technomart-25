@@ -1,7 +1,7 @@
 # Личный проект «Техномарт»
 
 * Студент: [Sergey Erofeev](https://up.htmlacademy.ru/htmlcss/25/user/118968).
-* Наставник: `Неизвестно`.
+* Наставник: [Макс Пушкарев](https://up.htmlacademy.ru/htmlcss/25/user/87167).
 
 ---
 
