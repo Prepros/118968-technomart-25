@@ -40,10 +40,10 @@
 
       <ul class="order-counter">
         <li class="order-counter-item">
-          <a class="order-counter-link bookmarks" href="#">Закладки: 0</a>
+          <a class="order-counter-link notempty bookmarks" href="#">Закладки: 0</a>
         </li>
         <li class="order-counter-item">
-          <a class="order-counter-link cart" href="#">Корзина: 0</a>
+          <a class="order-counter-link notempty cart" href="#">Корзина: 0</a>
         </li>
         <li class="order-counter-item">
           <a class="order-counter-link order" href="#">Оформить заказ</a>
@@ -66,7 +66,8 @@
       <ul class="profile">
         <li class="profile-item profile-item-top">
           <a class="profile-link icon" href="#">
-            <svg class="icon-login" width="20px" height="17px" viewBox="0 0 20 17" enable-background="new 0 0 20 17" xml:space="preserve">
+            <svg class="icon-login" width="20px" height="17px" viewBox="0 0 20 17" enable-background="new 0 0 20 17"
+                 xml:space="preserve">
               <g>
                 <polygon fill="#c5c5c5" points="14.875,8.5 6,0 6,6 0,6 0,11 6,11 6,17 	"/>
               </g>
@@ -89,15 +90,15 @@
   <div class="main-head-bottom">
     <div class="container">
 
-    <nav class="main-nav">
-      <a class="main-nav-link active" href="#">Главная</a>
-      <a class="main-nav-link" href="#">Компания</a>
-      <a class="main-nav-link" href="#">Каталог</a>
-      <a class="main-nav-link" href="#">Новости</a>
-      <a class="main-nav-link" href="#">Спецпредложения</a>
-      <a class="main-nav-link" href="#">Доставка</a>
-      <a class="main-nav-link" href="#">Контакты</a>
-    </nav>
+      <nav class="main-nav">
+        <a class="main-nav-link active" href="#">Главная</a>
+        <a class="main-nav-link" href="#">Компания</a>
+        <a class="main-nav-link" href="#">Каталог</a>
+        <a class="main-nav-link" href="#">Новости</a>
+        <a class="main-nav-link" href="#">Спецпредложения</a>
+        <a class="main-nav-link" href="#">Доставка</a>
+        <a class="main-nav-link" href="#">Контакты</a>
+      </nav>
 
     </div>
   </div>
@@ -106,81 +107,156 @@
 <main class="main-content">
   <div class="container">
 
-  <section class="category">
-    <h2 class="visually-hidden">Категории товаров</h2>
+    <section class="category">
+      <h2 class="visually-hidden">Категории товаров</h2>
 
-    <div class="category-top">
+      <div class="category-top">
 
-      <article class="category-item new yellow-color">
-        <h1 class="title">Материалы</h1>
-        <a class="category-button" href="#">На любой вкус</a>
-      </article>
+        <article class="category-item new yellow-color">
+          <h1 class="title">Материалы</h1>
+          <a class="category-button" href="#">На любой вкус</a>
+        </article>
 
-      <article class="category-item blue-color">
-        <h1 class="title">Инструмент</h1>
-        <a class="category-button" href="#">На все случаи</a>
-      </article>
+        <article class="category-item blue-color">
+          <h1 class="title">Инструмент</h1>
+          <a class="category-button" href="#">На все случаи</a>
+        </article>
 
-      <article class="category-item pink-color">
-        <h1 class="title">Техника</h1>
-        <a class="category-button" href="#">Для стройки</a>
-      </article>
-
-    </div>
-
-    <div class="category-bottom">
-
-      <div class="slider">
-
-        <input class="visually-hidden" id="slider-1" type="radio" name="slider" checked>
-        <input class="visually-hidden" id="slider-2" type="radio" name="slider">
-        <input class="visually-hidden" id="slider-arrow-1" type="radio" name="slider">
-        <input class="visually-hidden" id="slider-arrow-2" type="radio" name="slider">
-        <ul class="slider-list">
-          <li class="slider-item slider-item-1">
-            <img class="slider-img" src="img/slide-1.jpg" width="620" height="266" alt="Мужик с перфоратором">
-            <div class="slider-box">
-              <h3 class="slider-title">Перфораторы</h3>
-              <p class="slider-desc">Настоящие мужские игрушки</p>
-              <a class="slider-button" href="#">Открыть каталог</a>
-            </div>
-          </li>
-
-          <li class="slider-item slider-item-2">
-            <img class="slider-img" src="img/slide-2.jpg" width="620" height="266" alt="Мужик с друлью">
-            <div class="slider-box">
-              <h3 class="slider-title">Дрели</h3>
-              <p class="slider-desc">Соседям на радость</p>
-              <a class="slider-button" href="#">Открыть каталог</a>
-            </div>
-          </li>
-        </ul>
-
-        <p class="slider-controls">
-          <label class="slider-control slider-control-1" for="slider-1"><span class="visually-hidden">Первый слайд</span></label>
-          <label class="slider-control slider-control-2" for="slider-2"><span class="visually-hidden">Второй слайд</span></label>
-        </p>
-
-        <label class="slider-arrow slider-arrow-left" for="slider-arrow-1"><span class="visually-hidden">Предыдущий слайд</span></label>
-        <label class="slider-arrow slider-arrow-right" for="slider-arrow-2"><span class="visually-hidden">Следующий слайд</span></label>
+        <article class="category-item pink-color">
+          <h1 class="title">Техника</h1>
+          <a class="category-button" href="#">Для стройки</a>
+        </article>
 
       </div>
 
-      <div class="category-right">
-        <article class="category-item green-color">
-          <h1 class="title">Скидка 50%</h1>
-          <a class="category-button" href="#">На 350 товаров</a>
-        </article>
+      <div class="category-bottom">
 
-        <article class="category-item yellow-color delivery">
-          <h1 class="title">Доставка</h1>
-          <a class="category-button" href="#">Бесплатно</a>
-        </article>
+        <div class="slider">
+
+          <input class="visually-hidden" id="slider-1" type="radio" name="slider" checked>
+          <input class="visually-hidden" id="slider-2" type="radio" name="slider">
+          <input class="visually-hidden" id="slider-arrow-1" type="radio" name="slider">
+          <input class="visually-hidden" id="slider-arrow-2" type="radio" name="slider">
+          <ul class="slider-list">
+            <li class="slider-item slider-item-1">
+              <img class="slider-img" src="img/slide-1.jpg" width="620" height="266" alt="Мужик с перфоратором">
+              <div class="slider-box">
+                <h3 class="slider-title">Перфораторы</h3>
+                <p class="slider-desc">Настоящие мужские игрушки</p>
+                <a class="slider-button" href="catalog.html">Открыть каталог</a>
+              </div>
+            </li>
+
+            <li class="slider-item slider-item-2">
+              <img class="slider-img" src="img/slide-2.jpg" width="620" height="266" alt="Мужик с друлью">
+              <div class="slider-box">
+                <h3 class="slider-title">Дрели</h3>
+                <p class="slider-desc">Соседям на радость</p>
+                <a class="slider-button" href="catalog.html">Открыть каталог</a>
+              </div>
+            </li>
+          </ul>
+
+          <p class="slider-controls">
+            <label class="slider-control slider-control-1" for="slider-1"><span
+              class="visually-hidden">Первый слайд</span></label>
+            <label class="slider-control slider-control-2" for="slider-2"><span
+              class="visually-hidden">Второй слайд</span></label>
+          </p>
+
+          <label class="slider-arrow slider-arrow-left" for="slider-arrow-1"><span class="visually-hidden">Предыдущий слайд</span></label>
+          <label class="slider-arrow slider-arrow-right" for="slider-arrow-2"><span class="visually-hidden">Следующий слайд</span></label>
+
+        </div>
+
+        <div class="category-right">
+          <article class="category-item green-color">
+            <h1 class="title">Скидка 50%</h1>
+            <a class="category-button" href="#">На 350 товаров</a>
+          </article>
+
+          <article class="category-item yellow-color delivery">
+            <h1 class="title">Доставка</h1>
+            <a class="category-button" href="#">Бесплатно</a>
+          </article>
+        </div>
+
       </div>
 
-    </div>
+    </section>
 
-  </section>
+    <section class="popular">
+      <header class="section-head">
+        <h2 class="title">Популярные товары:</h2>
+        <a class="button" href="#">Все популярные товары</a>
+      </header>
+
+      <div class="popular-content">
+        <article class="popular-item">
+          <header class="popular-head">
+            <img class="popular-img" src="img/product-1.jpg" width="218" height="170"
+                 alt="Картинка Перфоратор BOSCH BFG 9000">
+            <p class="popular-action">
+              <a class="add-cart" href="#">Купить</a>
+              <a class="add-bookmark" href="#">В закладки</a>
+            </p>
+          </header>
+          <a class="popular-price" href="#">
+            <h1 class="title">Перфоратор BOSCH BFG 9000</h1>
+            <b class="old-price">32500 Р.</b>
+            <b class="new-price">25500 Р.</b>
+          </a>
+        </article>
+
+        <article class="popular-item">
+          <header class="popular-head">
+            <img class="popular-img" src="img/product-2.jpg" width="218" height="170"
+                 alt="Картинка Перфоратор BOSCH BFG 3000">
+            <p class="popular-action">
+              <a class="add-cart" href="#">Купить</a>
+              <a class="add-bookmark" href="#">В закладки</a>
+            </p>
+          </header>
+          <a class="popular-price" href="#">
+            <h1 class="title">Перфоратор BOSCH BFG 3000</h1>
+            <b class="old-price">22500 Р.</b>
+            <b class="new-price">15500 Р.</b>
+          </a>
+        </article>
+
+        <article class="popular-item">
+          <header class="popular-head">
+            <img class="popular-img" src="img/product-3.jpg" width="218" height="170"
+                 alt="Картинка Перфоратор BOSCH BFG 6000">
+            <p class="popular-action">
+              <a class="add-cart" href="#">Купить</a>
+              <a class="add-bookmark" href="#">В закладки</a>
+            </p>
+          </header>
+          <a class="popular-price" href="#">
+            <h1 class="title">Перфоратор BOSCH BFG 6000</h1>
+            <b class="old-price">30500 Р.</b>
+            <b class="new-price">25500 Р.</b>
+          </a>
+        </article>
+
+        <article class="popular-item new">
+          <header class="popular-head">
+            <img class="popular-img" src="img/product-4.jpg" width="218" height="170"
+                 alt="Картинка Перфоратор BOSCH BFG 2000">
+            <p class="popular-action">
+              <a class="add-cart" href="#">Купить</a>
+              <a class="add-bookmark" href="#">В закладки</a>
+            </p>
+          </header>
+          <a class="popular-price" href="#">
+            <h1 class="title">Перфоратор BOSCH BFG 2000</h1>
+            <b class="old-price"></b>
+            <b class="new-price">12500 Р.</b>
+          </a>
+        </article>
+      </div>
+    </section>
 
   </div>
 </main>
