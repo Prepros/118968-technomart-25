@@ -7,6 +7,24 @@
         url("../font/cuprum.woff") format("woff");
 }
 
+@font-face {
+  font-family: "Cuprum";
+  font-weight: 400;
+  font-style: italic;
+  src: local("Cuprum Italic"), local("Cuprum-Italic"),
+  url("../font/cuprumitalic.woff2") format("woff2"),
+  url("../font/cuprumitalic.woff") format("woff");
+}
+
+@font-face {
+  font-family: "Cuprum";
+  font-weight: 700;
+  font-style: italic;
+  src: local("Cuprum Bold Italic"), local("Cuprum-Bold-Italic"),
+  url("../font/cuprumbolditalic.woff2") format("woff2"),
+  url("../font/cuprumbolditalic.woff") format("woff");
+}
+
 *,
 *::before,
 *::after {
@@ -30,6 +48,7 @@ body {
   font-family: "Cuprum", Arial, sans-serif;
   font-size: 18px;
   line-height: 24px;
+  font-weight: 400;
   color: #000;
 
   background-color: #fff;
@@ -71,6 +90,8 @@ a {
 
 /* Верх шапки */
 .main-head-top {
+  margin-bottom: 47px;
+
   font-family: "Cuprum", Arial, sans-serif;
   font-size: 17px;
   line-height: 18px;
@@ -273,6 +294,198 @@ a {
 .order-counter-link.bookmarks:active::before,
 .order-counter-link.cart:active::before {
   opacity: .5;
+}
+
+
+/** Центр шапки **/
+.main-head-middle {
+  margin-bottom: 40px;
+}
+
+.main-head-middle .container {
+  display: flex;
+}
+
+/* Слоган */
+.main-head-middle .slogan {
+  width: 300px;
+  margin: 0;
+  margin-right: 20px;
+  padding-left: 53px;
+  padding-right: 50px;
+
+  font-size: 16px;
+  line-height: 23px;
+  font-weight: 400;
+  font-style: italic;
+  color: #ee3643;
+}
+
+/* Контакты */
+.main-head-middle .contact {
+  width: 270px;
+  font-style: normal;
+}
+
+.main-head-middle .contact-phone,
+.main-head-middle .contact-address {
+  margin: 0;
+}
+
+.main-head-middle .contact-phone {
+  position: relative;
+
+  margin-bottom: 5px;
+  padding-top: 8px;
+  padding-left: 71px;
+  padding-right: 49px;
+  padding-bottom: 9px;
+
+  font-size: 21px;
+  line-height: 21px;
+  font-weight: 400;
+  color: #e9292a;
+
+  border: 3px solid #fff;
+}
+
+.main-head-middle .contact-phone::before {
+  position: absolute;
+  top: 10px;
+  left: 13px;
+
+  width: 19px;
+  height: 19px;
+
+  background-image: url("../img/icon-phone.svg");
+  background-repeat: no-repeat;
+
+  content: "";
+}
+
+.main-head-middle .contact-address {
+  font-size: 14px;
+  line-height: 24px;
+  font-weight: 400;
+  color: #32425c;
+  text-align: center;
+}
+
+.profile {
+  max-width: 300px;
+  margin: 0;
+  margin-left: auto;
+  padding: 0;
+
+  list-style: none;
+}
+
+.profile-item {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.profile-item-top {
+  margin-bottom: 8px;
+}
+
+.profile-item-bottom {}
+
+.profile-link {
+  position: relative;
+  outline: none;
+}
+
+.profile-item-top .profile-link {
+  margin-right: 10px;
+  padding: 11px 25px;
+
+  font-size: 21px;
+  line-height: 21px;
+  color: #000;
+  
+  background-color: #fff;
+}
+
+.profile-item-top .profile-link:hover,
+.profile-item-top .profile-link:focus {
+  color: #ee3643;
+}
+
+.profile-item-top .profile-link:active {
+  color: #c5c5c5;
+}
+
+.profile-link:hover .icon-login path,
+.profile-link:hover .icon-login polygon,
+.profile-link:focus .icon-login path,
+.profile-link:focus .icon-login polygon {
+  fill: #32425c;
+}
+
+.profile-link:active .icon-login path,
+.profile-link:active .icon-login polygon {
+  fill: #c5c5c5;
+}
+
+.profile-item-bottom .profile-link {
+  position: relative;
+
+  margin-right: 33px;
+
+  font-size: 16px;
+  line-height: 18px;
+  color: #32425c;
+  text-decoration: underline;
+}
+
+.profile-item-bottom .profile-link:hover,
+.profile-item-bottom .profile-link:focus {
+  color: #ee3643;
+}
+
+.profile-item-bottom .profile-link:active {
+  color: rgba(50, 66, 92, .3);
+}
+
+.profile-item-bottom .profile-link:first-child {
+  margin-left: 18px;
+}
+
+.profile-item-bottom .profile-link:last-child {
+  margin-right: 0;
+}
+
+.profile-item-bottom .profile-link::before {
+  position: absolute;
+  top: 7px;
+  right: -20px;
+
+  width: 4px;
+  height: 5px;
+
+  background-color: #32425c;
+  border-radius: 50%;
+
+  content: "";
+}
+
+.profile-item-bottom .profile-link:last-child::before {
+  background-color: transparent;
+}
+
+.profile-link.icon {
+  padding-left: 48px;
+}
+
+.profile-link:last-child {
+  margin-right: 0;
+}
+
+.profile-link .icon-login {
+  position: absolute;
+  top: 13px;
+  left: 14px;
 }
 
 
