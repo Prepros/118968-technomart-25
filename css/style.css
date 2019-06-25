@@ -102,6 +102,15 @@ a {
   text-transform: uppercase;
 }
 
+.inner-page .title {
+  margin-bottom: 20px;
+  padding: 28px 30px 30px;
+
+  color: #32425c;
+
+  background-color: #f2f6f8;
+}
+
 .paragraph {
   margin: 13px 0;
 
@@ -118,6 +127,10 @@ a {
 
   color: #32425c;
   background-color: #f4f7f9;
+}
+
+.inner-page .main-head {
+  margin-bottom: 20px;
 }
 
 /* Верх шапки */
@@ -460,15 +473,23 @@ a {
   color: #c5c5c5;
 }
 
-.profile-link:hover .icon-login path,
-.profile-link:hover .icon-login polygon,
-.profile-link:focus .icon-login path,
-.profile-link:focus .icon-login polygon {
+.profile-item-in .profile-link {
+  margin-right: 0;
+}
+
+.profile-item-top .profile-link-logout {
+  padding: 13px 10px 0;
+}
+
+.profile-link:hover path,
+.profile-link:hover polygon,
+.profile-link:focus path,
+.profile-link:focus polygon {
   fill: #32425c;
 }
 
-.profile-link:active .icon-login path,
-.profile-link:active .icon-login polygon {
+.profile-link:active path,
+.profile-link:active polygon {
   fill: #c5c5c5;
 }
 
@@ -574,7 +595,9 @@ a {
 }
 
 /** Основной контент **/
-.main-content {}
+.main-content {
+  margin-bottom: 85px;
+}
 
 /* Секции категории */
 .category {
@@ -929,6 +952,10 @@ a {
 
   background-color: #ee3643;
   border-radius: 5px;
+  border: none;
+  outline: none;
+
+  cursor: pointer;
 }
 
 .button:hover,
@@ -1339,7 +1366,7 @@ a {
 .service-content-item.warranty::after,
 .service-content-item.credit::after {
   position: absolute;
-  top: 25px;
+  top: 0;
   right: 0;
 
   background-repeat: no-repeat;
@@ -1348,6 +1375,8 @@ a {
 }
 
 .service-content-item.delivery::after {
+  top: 25px;
+
   width: 468px;
   height: 261px;
 
@@ -1384,9 +1413,7 @@ a {
 }
 
 /* О компании */
-.about {
-  margin-bottom: 85px;
-}
+.about {}
 
 .about .container {
   display: flex;
@@ -1464,7 +1491,7 @@ a {
 
 .main-footer-top {
   display: flex;
-  margin-bottom: 28px;
+  margin-bottom: 34px;
 }
 
 .main-footer-top .logo {
@@ -1536,7 +1563,7 @@ a {
 .main-footer-bottom .copyright {
   width: 240px;
   margin: 0;
-  margin-right: 140px;
+  margin-right: 150px;
 
   font-size: 16px;
   line-height: 18px;
@@ -1621,6 +1648,9 @@ a {
   padding: 0;
   margin-left: auto;
 
+  font-size: 16px;
+  line-height: 18px;
+
   list-style: none;
 }
 
@@ -1645,3 +1675,287 @@ a {
   color: #ee3643;
   text-decoration: none;
 }
+
+/* Хлебные крошки */
+.breadcrumbs {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0;
+  margin-bottom: 20px;
+  padding: 0;
+
+  list-style: none;
+}
+
+.breadcrumbs-item {
+  position: relative;
+  margin-right: 40px;
+}
+
+.breadcrumbs-item:last-child {
+  margin-right: 0;
+}
+
+.breadcrumbs-item::before {
+  position: absolute;
+  top: 5px;
+  right: -24px;
+
+  width: 8px;
+  height: 12px;
+
+  background-image: url("../img/icon-right-small.svg");
+  background-repeat: no-repeat;
+
+  content: "";
+}
+
+.breadcrumbs-item:last-child::before {
+  display: none;
+}
+
+.breadcrumbs-link {
+  font-family: "PT Sans", Arial, sans-serif;
+  font-size: 13px;
+  line-height: 18px;
+  color: #000;
+  text-transform: uppercase;
+}
+
+.breadcrumbs-link:hover,
+.breadcrumbs-link:focus {
+  text-decoration: underline;
+}
+
+.breadcrumbs-link:hover polygon,
+.breadcrumbs-link:hover path {
+  fill: #ee3643;
+}
+
+/* Каталог продуктов */
+/* Фильтр */
+.filter {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.filter .title {
+  width: 100%;
+  margin: 0;
+  margin-bottom: 20px;
+}
+
+.filter {
+  width: 220px;
+  margin-right: 20px;
+}
+
+.filter-title {
+  width: 100%;
+  margin: 0;
+  margin-bottom: 11px;
+  padding: 10px 18px;
+
+  font-family: "PT Sans", Arial, sans-serif;
+  font-size: 13px;
+  font-weight: 400;
+  text-transform: uppercase;
+  line-height: 18px;
+  color: #000;
+
+  background-color: #f7f3ec;
+  border-radius: 5px;
+}
+
+.filter-form {
+  width: 100%;
+}
+
+.filter-feature {
+  margin: 0;
+  margin-bottom: 20px;
+  padding: 0;
+  padding-bottom: 20px;
+
+  border: none;
+  border-bottom: 1px solid #e5e5e5;
+}
+
+.filter-feature:nth-last-child(-n+2) {
+  border: none;
+}
+
+.filter-subtitle {
+  margin-bottom: 14px;
+
+  font-family: "PT Sans", Arial, sans-serif;
+  font-size: 17px;
+  line-height: 30px;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: #000;
+}
+
+.filter-cost {
+
+}
+
+.range {
+  position: relative;
+
+  height: 80px;
+  margin-bottom: 10px;
+
+  background-color: #f7f3ec;
+  border-top: 1px solid transparent;
+  border-radius: 5px;
+}
+
+.range-scale {
+  height: 2px;
+  margin: 39px 20px 0;
+
+  background-color: #d7dcde;
+}
+
+.range-bar {
+  height: 2px;
+  background-color: #00ca74;
+}
+
+.range-toggle {
+  position: absolute;
+  top: 30px;
+
+  width: 20px;
+  height: 20px;
+  padding: 0;
+
+  background-color: #ababab;
+  border: 8px solid #fff;
+  border-radius: 50%;
+  box-shadow: 0 2px #e0ddd8;
+  
+  cursor: pointer;
+}
+
+.range-toggle-min {
+  left: 20px;
+}
+
+.range-toggle-max {
+  right: 20px;
+}
+
+.price {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.price-cost,
+.price-input {
+  width: 95px;
+}
+
+.price-input {
+  padding: 9px;
+  font-family: "PT Sans", Arial, sans-serif;
+  font-size: 17px;
+  line-height: 18px;
+  color: #000;
+  font-weight: 400;
+  text-align: center;
+
+  background-color: #f7f3ec;
+  border: none;
+  border-radius: 5px;
+}
+
+.filter-item {
+  margin: 0;
+  margin-bottom: 25px;
+}
+
+.filter-label {
+  padding-left: 35px;
+
+  font-family: "PT Sans", Arial, sans-serif;
+  font-size: 15px;
+  line-height: 20px;
+  text-transform: uppercase;
+}
+
+.filter-button {
+  padding: 10px 38px;
+  font-family: "PT Sans", Arial, sans-serif;
+  font-size: 13px;
+  line-height: 18px;
+  font-weight: 400;
+  color: #000;
+
+  background-color: transparent;
+  border: 1px solid #e5e5e5;
+  border-radius: 5px;
+
+  cursor: pointer;
+}
+
+.filter-button:hover,
+.filter-button:focus {
+  background-color: #e5e5e5;
+}
+
+/* Checkbox, radio */
+.checkbox,
+.radio {
+  position: relative;
+  cursor: pointer;
+}
+
+.checkbox-img,
+.radio-img {
+  position: absolute;
+  top: -3px;
+  left: 0;
+
+  fill: #c5c5c5;
+}
+
+.checkbox:hover .checkbox-img,
+.radio:hover .radio-img,
+.checkbox-input:focus + .checkbox-img,
+.radio-input:focus + .radio-img {
+  fill: #b5b5b5;
+}
+
+.checkbox-off,
+.checkbox-on,
+.radio-off,
+.radio-on {
+  display: none;
+}
+
+.checkbox-input + .checkbox-img .checkbox-off,
+.checkbox-input:checked + .checkbox-img .checkbox-on,
+.radio-input + .radio-img .radio-off,
+.radio-input:checked + .radio-img .radio-on {
+  display: block;
+}
+
+.checkbox-input:disabled ~ *,
+.radio-input:disabled ~ * {
+  cursor: not-allowed;
+}
+
+.checkbox-input:disabled + .checkbox-img,
+.radio-input:disabled + .radio-img {
+  opacity: .3;
+}
+
+.checkbox-input:disabled ~ .product-label,
+.radio-input:disabled ~ .product-label {
+  opacity: .4;
+}
+
+
