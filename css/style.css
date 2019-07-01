@@ -126,7 +126,7 @@ a {
 
 /* Верх шапки */
 .main-head-top {
-  margin-bottom: 47px;
+  margin-bottom: 48px;
 
   font-family: "Cuprum", Arial, sans-serif;
   font-size: 17px;
@@ -383,7 +383,7 @@ a {
 .main-head-middle .contact-phone {
   position: relative;
 
-  margin-bottom: 5px;
+  margin-bottom: 3px;
   padding-top: 8px;
   padding-left: 70px;
   padding-right: 49px;
@@ -399,8 +399,8 @@ a {
 
 .main-head-middle .contact-phone::before {
   position: absolute;
-  top: 10px;
-  left: 13px;
+  top: 8px;
+  left: 12px;
 
   width: 19px;
   height: 19px;
@@ -540,8 +540,8 @@ a {
 
 .profile-link .icon-login {
   position: absolute;
-  top: 13px;
-  left: 14px;
+  top: 12px;
+  left: 16px;
 }
 
 /* Низ шапки */
@@ -554,8 +554,8 @@ a {
   display: flex;
   flex-wrap: wrap;
 
-  padding-left: 22px;
-  padding-right: 22px;
+  padding-left: 24px;
+  padding-right: 20px;
 
   color: #fff;
 
@@ -565,7 +565,7 @@ a {
 
 .main-nav-link {
   flex-grow: 1;
-  padding: 18px 26px 16px;
+  padding: 18px 28px;
 
   font-size: 17px;
   line-height: 17px;
@@ -611,7 +611,7 @@ a {
   padding-top: 22px;
   padding-left: 23px;
   padding-right: 100px;
-  padding-bottom: 18px;
+  padding-bottom: 21px;
 
   background-repeat: no-repeat;
 }
@@ -677,7 +677,7 @@ a {
 
 .category-item .title {
   margin: 0;
-  margin-bottom: 15px;
+  margin-bottom: 12px;
 
   font-size: 24px;
   line-height: 30px;
@@ -688,7 +688,7 @@ a {
 
 .category-button {
   display: inline-block;
-  width: 130px;
+  width: 135px;
   margin-left: 2px;
   padding: 10px 20px;
 
@@ -763,7 +763,7 @@ a {
 
 .slider-title {
   margin: 0;
-  margin-bottom: 5px;
+  margin-bottom: 2px;
 
   font-size: 36px;
   line-height: 36px;
@@ -785,7 +785,7 @@ a {
 
 .slider-button {
   position: absolute;
-  bottom: 20px;
+  bottom: 21px;
 
   display: inline-block;
   padding: 10px 0;
@@ -919,7 +919,8 @@ a {
   justify-content: space-between;
   align-items: center;
   margin-bottom: 20px;
-  padding: 27px;
+  padding: 26px 28px;
+  padding-right: 24px;
 
   background-color: #f9f5f0;
 }
@@ -1009,8 +1010,8 @@ a {
 
 .popular-item.new::before {
   position: absolute;
-  top: 2px;
-  right: -21px;
+  top: 4px;
+  right: -22px;
   z-index: 2;
 
   width: 83px;
@@ -1072,7 +1073,7 @@ a {
 .popular-action .add-cart {
   position: relative;
 
-  margin-bottom: 7px;
+  margin-bottom: 9px;
   padding: 11px 0 7px 3px;
 
   color: #fff;
@@ -1144,10 +1145,13 @@ a {
   margin-bottom: 12px;
   padding: 0;
 
+  font-family: "PT Sans", Arial, sans-serif;
   font-size: 18px;
   line-height: 20px;
+  font-weight: 700;
   color: #000;
   text-align: center;
+  text-transform: capitalize;
 
   background-color: transparent;
 }
@@ -1164,7 +1168,7 @@ a {
 
 .popular-price .old-price {
   min-height: 18px;
-  margin-bottom: 7px;
+  margin-bottom: 10px;
 
   color: #a9a9a9;
   text-decoration: line-through;
@@ -1177,10 +1181,11 @@ a {
 .popular-price .new-price {
   position: relative;
 
-  width: 138px;
-  height: 40px;
+  width: 140px;
+  height: 38px;
   margin: 0 auto;
-  padding: 12px 24px;
+  margin-left: 12px;
+  padding: 10px 24px;
   padding-right: 25px;
 
   color: #fff;
@@ -1274,14 +1279,14 @@ a {
 
 /* Сервисы */
 .service {
-  margin-bottom: 77px;
-  padding: 63px 0 54px;
+  margin-bottom: 79px;
+  padding: 65px 0 33px;
   background-color: #f4f8f9;
 }
 
 .service .paragraph {
   width: 405px;
-  margin-bottom: 21px;
+  margin-bottom: 25px;
 }
 
 .service-menu,
@@ -1302,7 +1307,7 @@ a {
   position: relative;
 
   width: 240px;
-  padding: 46px 0;
+  padding: 45px 0;
 }
 
 .service-menu::after {
@@ -1323,10 +1328,11 @@ a {
 
 .service-menu-link {
   display: block;
-  padding: 15px 22px;
+  padding: 13px 22px 16px;
 
   font-size: 21px;
   line-height: 30px;
+  font-weight: 700;
   color: #fff;
   background-color: #32425c;
 
@@ -1355,7 +1361,7 @@ a {
 .service-content {
   width: 620px;
   margin-left: auto;
-  padding: 46px 0;
+  padding: 43px 0;
 }
 
 .service-content-item {
@@ -1392,6 +1398,9 @@ a {
 }
 
 .service-content-item.warranty::after {
+  top: 4px;
+  right: -8px;
+
   width: 389px;
   height: 283px;
 
@@ -1399,6 +1408,8 @@ a {
 }
 
 .service-content-item.credit::after {
+  right: -10px;
+
   width: 465px;
   height: 285px;
 
@@ -1417,6 +1428,10 @@ a {
 }
 
 .service-button {
+  min-width: auto;
+  padding-left: 45px;
+  padding-right: 45px;
+
   background-color: #ff5357;
 }
 
@@ -1447,7 +1462,7 @@ a {
 }
 
 .about .paragraph + .paragraph {
-  margin: 24px 0;
+  margin: 23px 0;
 }
 
 .about-list {
@@ -1462,7 +1477,7 @@ a {
   position: relative;
 
   margin-bottom: 20px;
-  padding-left: 35px;
+  padding-left: 37px;
 
   font-size: 18px;
   line-height: 20px;
@@ -1487,8 +1502,8 @@ a {
 
 .about-map {
   display: block;
-  margin-top: 35px;
-  margin-bottom: 31px;
+  margin-top: 31px;
+  margin-bottom: 33px;
 }
 
 /* Подвал */
@@ -1499,7 +1514,7 @@ a {
 
 .main-footer-top {
   display: flex;
-  margin-bottom: 34px;
+  margin-bottom: 32px;
 }
 
 .main-footer-top .logo {
@@ -1508,8 +1523,14 @@ a {
   padding-bottom: 21px;
 }
 
+.main-footer-top .logo-img {
+  width: 138px;
+  height: 23px;
+}
+
 .footer-nav {
   display: flex;
+  flex-wrap: wrap;
   max-width: 560px;
   margin: 0;
   padding: 0;
@@ -1520,7 +1541,7 @@ a {
 }
 
 .footer-nav-item {
-  margin-right: 60px;
+  margin-right: 59px;
 }
 
 .footer-nav-item:last-child {
@@ -1548,6 +1569,8 @@ a {
 
 .main-footer-middle .address {
   width: 340px;
+  margin-left: 4px;
+
   font-style: normal;
 }
 
@@ -1555,12 +1578,20 @@ a {
   margin-top: 0;
 }
 
+.main-footer-middle .footer-nav-item {
+  margin-right: 56px;
+}
+
+.main-footer-middle .footer-nav-item:last-child {
+  margin-right: 0;
+}
+
 .main-footer-middle .footer-nav-link {
   color: #ffd180;
 }
 
 .main-footer-bottom {
-  padding: 35px 0;
+  padding: 36px 0;
   background-color: #293449;
 }
 
@@ -1588,10 +1619,11 @@ a {
 
 .main-footer-bottom .social {
   max-width: 155px;
+  margin-top: -2px;
 }
 
 .social-item {
-  margin-right: 5px;
+  margin-right: 4px;
   margin-bottom: 10px;
 }
 
@@ -2225,7 +2257,7 @@ a {
 
 .modal-contact {
   width: 620px;
-  padding-top: 52px;
+  padding-top: 44px;
 
   border-top: 7px solid #ff5358;
 }
@@ -2252,13 +2284,13 @@ a {
 }
 
 .form-contact > .form-contact-box {
-  margin-bottom: 37px;
+  margin-bottom: 30px;
 }
 
 .form-contact-item {
   width: 220px;
   margin: 0;
-  margin-bottom: 23px;
+  margin-bottom: 17px;
 }
 
 .form-contact-item:last-child {
@@ -2338,8 +2370,8 @@ a {
 
 .modal-close {
   position: absolute;
-  top: 16px;
-  right: 9px;
+  top: 6px;
+  right: 6px;
 
   width: 27px;
   height: 27px;

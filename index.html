@@ -314,9 +314,9 @@
         Мы стараемся изо всех сил, чтобы сделать ваши покупки приятными.</p>
 
       <div class="service-box">
-        <input class="visually-hidden" id="service-1" type="radio" name="service" checked>
-        <input class="visually-hidden" id="service-2" type="radio" name="service">
-        <input class="visually-hidden" id="service-3" type="radio" name="service">
+        <input class="visually-hidden" id="service-1" type="radio" name="service" >
+        <input class="visually-hidden" id="service-2" type="radio" name="service" >
+        <input class="visually-hidden" id="service-3" type="radio" name="service" checked>
 
         <ul class="service-menu">
           <li class="service-menu-item">
@@ -392,7 +392,7 @@
   <div class="container">
     <div class="main-footer-top">
       <a class="logo">
-        <img class="logo-img" src="img/logo.png" width="109" height="19" alt="Логотип Техномарт">
+        <img class="logo-img" src="img/logo-footer.png" width="138" height="23" alt="Логотип Техномарт">
       </a>
       <ul class="footer-nav">
         <li class="footer-nav-item">
@@ -464,6 +464,42 @@
     </div>
   </div>
 </footer>
+
+<section class="modal modal-contact">
+  <h2 class="visually-hidden">Форма обратной связи</h2>
+
+  <form class="form-contact" action="post">
+    <div class="form-contact-box">
+      <p class="form-contact-item">
+        <label class="form-contact-title" for="contact-name">Ваше имя:</label>
+        <input class="form-contact-input" id="contact-name" type="text" name="name" placeholder="Имя Фамилия">
+      </p>
+      <p class="form-contact-item">
+        <label class="form-contact-title" for="contact-email">Ваш email:</label>
+        <input class="form-contact-input" id="contact-email" type="email" name="email" placeholder="email@example.com">
+      </p>
+      <p class="form-contact-item wide">
+        <label class="form-contact-title" id="contact-text" for="">Текст письма:</label>
+        <textarea class="form-contact-textarea" id="contact-text" name="text"
+                  placeholder="В свободной форме"></textarea>
+      </p>
+    </div>
+    <div class="form-contact-button">
+      <p class="form-contact-box">
+        <button class="button contact-button" type="submit">Отправить</button>
+      </p>
+    </div>
+  </form>
+  <button class="modal-close" type="button"><span class="visually-hidden">Закрыть модальное окно</span></button>
+</section>
+
+<section class="modal modal-map">
+  <h2 class="visually-hidden">Карта проезда</h2>
+  <p class="modal-map-item">
+    <img class="modal-map-img" src="img/map-big.jpg" width="940" height="496" alt="Большая Конюшенная ул. 19">
+  </p>
+  <button class="modal-close" type="button"><span class="visually-hidden">Закрыть модальное окно</span></button>
+</section>
 
 <script src="#"></script>
 </body>
