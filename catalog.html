@@ -47,7 +47,7 @@
     <div class="container">
 
       <a class="logo" href="index.html">
-        <img class="logo-img" src="img/logo.svg" width="109" height="19" alt="Логотип Техномарт">
+        <img class="logo-img" src="img/logo.png" width="109" height="19" alt="Логотип Техномарт">
       </a>
 
       <form class="search" action="get">
@@ -123,9 +123,9 @@
     <div class="container">
 
       <nav class="main-nav">
-        <a class="main-nav-link active" href="#">Главная</a>
+        <a class="main-nav-link" href="#">Главная</a>
         <a class="main-nav-link" href="#">Компания</a>
-        <a class="main-nav-link" href="#">Каталог</a>
+        <a class="main-nav-link active">Каталог</a>
         <a class="main-nav-link" href="#">Новости</a>
         <a class="main-nav-link" href="#">Спецпредложения</a>
         <a class="main-nav-link" href="#">Доставка</a>
@@ -169,7 +169,7 @@
     </ul>
 
     <section class="product">
-      <h1 class="product-title">Перфораторы</h1>
+      <h2 class="product-title">Перфораторы</h2>
 
       <div class="product-wrapper">
 
@@ -488,7 +488,7 @@
   <div class="container">
     <div class="main-footer-top">
       <a class="logo">
-        <img class="logo-img" src="img/logo.svg" width="109" height="19" alt="Логотип Техномарт">
+        <img class="logo-img" src="img/logo.png" width="109" height="19" alt="Логотип Техномарт">
       </a>
       <ul class="footer-nav">
         <li class="footer-nav-item">
@@ -498,7 +498,7 @@
           <a class="footer-nav-link" href="#">Новости</a>
         </li>
         <li class="footer-nav-item">
-          <a class="footer-nav-link" href="#">Каталог</a>
+          <a class="footer-nav-link">Каталог</a>
         </li>
         <li class="footer-nav-item">
           <a class="footer-nav-link" href="#">Доставка</a>
@@ -560,6 +560,42 @@
     </div>
   </div>
 </footer>
+
+<section class="modal  modal-contact">
+  <h2 class="visually-hidden">Форма обратной связи</h2>
+
+  <form class="form-contact" action="post">
+    <div class="form-contact-box">
+      <p class="form-contact-item">
+        <label class="form-contact-title" for="contact-name">Ваше имя:</label>
+        <input class="form-contact-input" id="contact-name" type="text" name="name" placeholder="Имя Фамилия">
+      </p>
+      <p class="form-contact-item">
+        <label class="form-contact-title" for="contact-email">Ваш email:</label>
+        <input class="form-contact-input" id="contact-email" type="email" name="email" placeholder="email@example.com">
+      </p>
+      <p class="form-contact-item wide">
+        <label class="form-contact-title" id="contact-text" for="">Текст письма:</label>
+        <textarea class="form-contact-textarea" id="contact-text" name="text"
+                  placeholder="В свободной форме"></textarea>
+      </p>
+    </div>
+    <div class="form-contact-button">
+      <p class="form-contact-box">
+        <button class="button contact-button" type="submit">Отправить</button>
+      </p>
+    </div>
+  </form>
+  <button class="modal-close" type="button"><span class="visually-hidden">Закрыть модальное окно</span></button>
+</section>
+
+<section class="modal modal-show modal-map">
+  <h2 class="visually-hidden">Карта проезда</h2>
+  <p class="modal-map-item">
+    <img class="modal-map-img" src="img/map-big.jpg" width="940" height="496" alt="Большая Конюшенная ул. 19">
+  </p>
+  <button class="modal-close" type="button"><span class="visually-hidden">Закрыть модальное окно</span></button>
+</section>
 
 <script src="#"></script>
 </body>
