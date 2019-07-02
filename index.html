@@ -25,7 +25,7 @@
         <img class="logo-img" src="img/logo.png" width="109" height="19" alt="Логотип Техномарт">
       </a>
 
-      <form class="search" action="get">
+      <form class="search" action="http://echo.htmlacademy.ru" method="get">
         <label class="search-box">
           <span class="visually-hidden">Форма поиска по сайту</span>
           <input class="search-input" type="text" name="search" placeholder="Поиск:">
@@ -40,7 +40,7 @@
 
       <ul class="order-counter">
         <li class="order-counter-item">
-          <a class="order-counter-link notempty bookmarks" href="#">Закладки: 0</a>
+          <a class="order-counter-link bookmarks" href="#">Закладки: 0</a>
         </li>
         <li class="order-counter-item">
           <a class="order-counter-link cart" href="#">Корзина: 0</a>
@@ -314,9 +314,9 @@
         Мы стараемся изо всех сил, чтобы сделать ваши покупки приятными.</p>
 
       <div class="service-box">
-        <input class="visually-hidden" id="service-1" type="radio" name="service" >
-        <input class="visually-hidden" id="service-2" type="radio" name="service" >
-        <input class="visually-hidden" id="service-3" type="radio" name="service" checked>
+        <input class="visually-hidden" id="service-1" type="radio" name="service" checked>
+        <input class="visually-hidden" id="service-2" type="radio" name="service">
+        <input class="visually-hidden" id="service-3" type="radio" name="service">
 
         <ul class="service-menu">
           <li class="service-menu-item">
@@ -369,7 +369,7 @@
           многими транспортными компаниями:</p>
         <ul class="about-list">
           <li class="about-item">Деловые линии</li>
-          <li class="about-item">Автотрейд</li>
+          <li class="about-item">Автотрейдинг</li>
           <li class="about-item">ЖелДорЭкспедиция</li>
         </ul>
         <a class="button" href="#">Подробнее о компании</a>
@@ -381,7 +381,7 @@
         <a class="about-map" href="#">
           <img class="about-img" src="img/map-small.jpg" width="300" height="158" alt="Большая Конюшенная 19">
         </a>
-        <a class="button" href="#">Заблудились? Напишите нам!</a>
+        <a class="button about-button" href="#">Заблудились? Напишите нам!</a>
       </div>
     </div>
   </section>
@@ -438,7 +438,7 @@
         © 2010–2019 Компания «Техномарт»
         Все права защищены
       </p>
-      
+
       <ul class="social">
         <li class="social-item">
           <a class="social-link vk" href="#"><span class="visually-hidden">Вконтакте</span></a>
@@ -468,7 +468,7 @@
 <section class="modal modal-contact">
   <h2 class="visually-hidden">Форма обратной связи</h2>
 
-  <form class="form-contact" action="post">
+  <form class="form-contact" action="http://echo.htmlacademy.ru" method="post">
     <div class="form-contact-box">
       <p class="form-contact-item">
         <label class="form-contact-title" for="contact-name">Ваше имя:</label>
@@ -479,7 +479,7 @@
         <input class="form-contact-input" id="contact-email" type="email" name="email" placeholder="email@example.com">
       </p>
       <p class="form-contact-item wide">
-        <label class="form-contact-title" id="contact-text" for="">Текст письма:</label>
+        <label class="form-contact-title" for="contact-text">Текст письма:</label>
         <textarea class="form-contact-textarea" id="contact-text" name="text"
                   placeholder="В свободной форме"></textarea>
       </p>
@@ -495,12 +495,15 @@
 
 <section class="modal modal-map">
   <h2 class="visually-hidden">Карта проезда</h2>
-  <p class="modal-map-item">
+  <p class="modal-map-item" id="map">
     <img class="modal-map-img" src="img/map-big.jpg" width="940" height="496" alt="Большая Конюшенная ул. 19">
   </p>
   <button class="modal-close" type="button"><span class="visually-hidden">Закрыть модальное окно</span></button>
 </section>
 
-<script src="#"></script>
+<div class="overlay"></div>
+
+<script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU"></script>
+<script src="js/script.js"></script>
 </body>
 </html>

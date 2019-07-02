@@ -121,7 +121,7 @@ a {
 }
 
 .inner-page .main-head {
-  margin-bottom: 20px;
+  margin-bottom: 18px;
 }
 
 /* Верх шапки */
@@ -975,7 +975,7 @@ a {
 
 .product-wrapper-right .popular-content {
   width: 700px;
-  margin-bottom: 56px;
+  margin-bottom: 54px;
 }
 
 .popular-item {
@@ -1456,7 +1456,7 @@ a {
   margin-left: auto;
 }
 
-.about-right .button {
+.about-button {
   min-width: 100%;
   padding: 10px 40px;
 }
@@ -1750,6 +1750,10 @@ a {
   content: "";
 }
 
+.breadcrumbs-item:first-child::before {
+  right: -20px;
+}
+
 .breadcrumbs-item:last-child::before {
   display: none;
 }
@@ -1810,7 +1814,7 @@ a {
   margin: 0;
   margin-bottom: 17px;
   padding: 0;
-  padding-bottom: 7px;
+  padding-bottom: 2px;
 
   border: none;
   border-bottom: 1px solid #e5e5e5;
@@ -1818,11 +1822,11 @@ a {
 
 .filter-feature:first-child {
   margin-bottom: 16px;
-  padding-bottom: 28px;
+  padding-bottom: 27px;
 }
 
 .filter-feature:nth-last-child(-n+2) {
-  margin-bottom: 53px;
+  margin-bottom: 55px;
   border: none;
 }
 
@@ -1860,6 +1864,7 @@ a {
 }
 
 .range-bar {
+  width: 85%;
   height: 2px;
   background-color: #00ca74;
 }
@@ -1885,7 +1890,7 @@ a {
 }
 
 .range-toggle-max {
-  right: 20px;
+  right: 40px;
 }
 
 .price {
@@ -1900,7 +1905,7 @@ a {
 }
 
 .price-input {
-  padding: 8px 10px;
+  padding: 9px 10px;
   font-family: "PT Sans", Arial, sans-serif;
   font-size: 17px;
   line-height: 18px;
@@ -1915,7 +1920,7 @@ a {
 
 .filter-item {
   margin: 0;
-  margin-bottom: 15px;
+  margin-bottom: 16px;
 }
 
 .filter-label {
@@ -1924,6 +1929,7 @@ a {
   font-family: "PT Sans", Arial, sans-serif;
   font-size: 15px;
   line-height: 20px;
+  font-weight: 400;
   text-transform: uppercase;
 }
 
@@ -2024,7 +2030,7 @@ a {
 }
 
 .product-about {
-  padding: 64px 0 51px;
+  padding: 64px 0 55px;
   color: #000;
   background-color: #f2f6f8;
 }
@@ -2046,6 +2052,7 @@ a {
   font-size: 13px;
   line-height: 24px;
   font-weight: 400;
+  white-space: pre-line;
 }
 
 .sort {
@@ -2144,21 +2151,21 @@ a {
   width: 0;
   height: 0;
 
-  border: 7px solid transparent;
+  border: 6px solid transparent;
 
   content: "";
 }
 
 .sort-link.up::before {
-  top: -5px;
+  top: -1px;
   left: 0;
 
   border-bottom: 10px solid #c5c5c5;
 }
 
 .sort-link.down::before {
-  top: 3px;
-  left: 2px;
+  top: 5px;
+  left: 3px;
 
   border-top: 10px solid #c5c5c5;
 }
@@ -2193,7 +2200,7 @@ a {
 }
 
 .pagination-item {
-  margin-right: 10px;
+  margin-right: 9px;
 
   font-family: "PT Sans", Arial, sans-serif;
   font-size: 13px;
@@ -2237,6 +2244,18 @@ a {
 }
 
 /* Модальное окно */
+.overlay {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+
+  display: none;
+
+  background-color: rgba(255, 255, 255, 0.3);
+}
+
 .modal {
   position: fixed;
   top: 50%;
@@ -2245,18 +2264,24 @@ a {
 
   display: none;
 
+
   background-color: #fff;
 
-  transform: translate(-50%, -50%);
+
   box-shadow: 0 10px 20px rgba(0, 0, 0, .7);
 }
 
 .modal-show {
   display: block;
+
+  animation-name: bounceInRight;
+  animation-duration: 0.6s;
 }
 
 .modal-contact {
   width: 620px;
+  margin-top: -223px;
+  margin-left: -310px;
   padding-top: 44px;
 
   border-top: 7px solid #ff5358;
@@ -2265,14 +2290,29 @@ a {
 .modal-map {
   width: 940px;
   height: 446px;
+  margin-top: -190px;
+  margin-left: -470px;
 }
 
 .modal-map-item {
+  position: relative;
   margin: 0;
 }
 
-.form-contact {
+modal-map-img {
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: 5;
+}
 
+.modal-map-frame {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 9;
+
+  border: none;
 }
 
 .form-contact-box {
@@ -2347,8 +2387,12 @@ a {
   outline: none;
 }
 
-.form-contact-input {
+.form-contact-input.error,
+.form-contact-textarea.error {
+  border-color: #ee3643;
 
+  animation-name: shake;
+  animation-duration: 0.6s;
 }
 
 .form-contact-textarea {
@@ -2372,6 +2416,7 @@ a {
   position: absolute;
   top: 6px;
   right: 6px;
+  z-index: 11;
 
   width: 27px;
   height: 27px;
@@ -2404,4 +2449,75 @@ a {
 
 .modal-close::after {
   transform: rotate(-45deg);
+}
+
+/* !important нужен для того чтобы перебить стили по умолчанию яндекс карты */
+ymaps {
+  position: absolute !important;
+  top: 0;
+  left: 0;
+  z-index: 11;
+}
+
+@keyframes bounceInRight {
+  from,
+  60%,
+  75%,
+  90%,
+  to {
+    -webkit-animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+    animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+  }
+
+  from {
+    opacity: 0;
+    -webkit-transform: translate3d(3000px, 0, 0);
+    transform: translate3d(3000px, 0, 0);
+  }
+
+  60% {
+    opacity: 1;
+    -webkit-transform: translate3d(-25px, 0, 0);
+    transform: translate3d(-25px, 0, 0);
+  }
+
+  75% {
+    -webkit-transform: translate3d(10px, 0, 0);
+    transform: translate3d(10px, 0, 0);
+  }
+
+  90% {
+    -webkit-transform: translate3d(-5px, 0, 0);
+    transform: translate3d(-5px, 0, 0);
+  }
+
+  to {
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+@keyframes shake {
+  from,
+  to {
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+
+  10%,
+  30%,
+  50%,
+  70%,
+  90% {
+    -webkit-transform: translate3d(-10px, 0, 0);
+    transform: translate3d(-10px, 0, 0);
+  }
+
+  20%,
+  40%,
+  60%,
+  80% {
+    -webkit-transform: translate3d(10px, 0, 0);
+    transform: translate3d(10px, 0, 0);
+  }
 }
