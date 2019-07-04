@@ -137,10 +137,6 @@ a {
   background-color: #293449;
 }
 
-.main-head-top .container {
-  display: flex;
-}
-
 /* Логотип */
 .logo {
   display: flex;
@@ -348,10 +344,6 @@ a {
 /** Центр шапки **/
 .main-head-middle {
   margin-bottom: 40px;
-}
-
-.main-head-middle .container {
-  display: flex;
 }
 
 /* Слоган */
@@ -647,31 +639,31 @@ a {
 
 .category-item.yellow-color {
   background-color: #ffbf47;
-  background-image: url("../img/icon-1.svg");
+  background-image: url("../img/icon-material.svg");
   background-position: 213px 32px;
 }
 
 .category-item.blue-color {
   background-color: #3bbce3;
-  background-image: url("../img/icon-2.svg");
+  background-image: url("../img/icon-tool.svg");
   background-position: 197px 34px;
 }
 
 .category-item.pink-color {
   background-color: #dc91d8;
-  background-image: url("../img/icon-3.svg");
+  background-image: url("../img/icon-tech.svg");
   background-position: 191px 31px;
 }
 
 .category-item.green-color {
   background-color: #8ed78f;
-  background-image: url("../img/icon-4.svg");
+  background-image: url("../img/icon-basket.svg");
   background-position: 196px 27px;
 }
 
 .category-item.yellow-color.delivery {
   background-color: #ffbf47;
-  background-image: url("../img/icon-5.svg");
+  background-image: url("../img/icon-delivery.svg");
   background-position: 191px 33px;
 }
 
@@ -1438,7 +1430,7 @@ a {
 /* О компании */
 .about {}
 
-.about .container {
+.flex-container {
   display: flex;
 }
 
@@ -1593,10 +1585,6 @@ a {
 .main-footer-bottom {
   padding: 36px 0;
   background-color: #293449;
-}
-
-.main-footer-bottom .container {
-  display: flex;
 }
 
 .main-footer-bottom .copyright {
@@ -2315,6 +2303,103 @@ modal-map-img {
   border: none;
 }
 
+.modal-success {
+  width: 620px;
+  height: 282px;
+  margin-left: -310px;
+  margin-top: -141px;
+
+  border-top: 7px solid #ee3643;
+}
+
+.modal-success-top {
+  display: flex;
+  padding: 66px 83px;
+}
+
+.modal-success-title {
+  position: relative;
+
+  margin: 0;
+  padding-left: 98px;
+
+  font-family: "Cuprum", Arial, sans-serif;
+  font-size: 30px;
+  line-height: 30px;
+  font-weight: 400;
+}
+
+.modal-success-title::before {
+  position: absolute;
+  top: -17px;
+  left: -2px;
+
+  width: 66px;
+  height: 66px;
+
+  background-image: url("../img/success.svg");
+  background-repeat: no-repeat;
+
+  content: "";
+}
+
+.modal-success-bottom {
+  background-color: #f4f4f4;
+}
+
+.modal-success-button {
+  display: flex;
+  margin: 0;
+  padding: 38px 80px;
+}
+
+.success-button {
+  width: 220px;
+  padding: 10px;
+
+  font-size: 14px;
+  line-height: 18px;
+  color: #fff;
+  text-align: center;
+  text-transform: uppercase;
+
+  border-radius: 5px;
+  border: none;
+  outline: none;
+
+  cursor: pointer;
+}
+
+.success-button-left {
+  margin-right: 20px;
+
+  color: #fff;
+  background-color: #ee3643;
+}
+
+.success-button-left:hover,
+.success-button-left:focus {
+  background-color: #ca2c37;
+}
+
+.success-button-left:active {
+  background-color: #ba2732;
+}
+
+.success-button-right {
+  color: #000;
+  background-color: #fff;
+}
+
+.success-button-right:hover,
+.success-button-right:focus {
+  background-color: #ccc;
+}
+
+.success-button-right:active {
+  background-color: #c6c6c6;
+}
+
 .form-contact-box {
   display: flex;
   flex-wrap: wrap;
@@ -2456,7 +2541,6 @@ ymaps {
   position: absolute !important;
   top: 0;
   left: 0;
-  z-index: 11;
 }
 
 @keyframes bounceInRight {

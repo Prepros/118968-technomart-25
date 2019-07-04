@@ -5,11 +5,13 @@ var overlay = document.querySelector(".overlay");
 var mapImg = document.querySelector(".about-map");
 var feedbackButton = document.querySelector(".about-button");
 var closeButton = document.querySelectorAll(".modal-close");
+var addСart = document.querySelectorAll(".add-cart");
 
 // Модальные окна
 var modal = document.querySelectorAll(".modal");
 var modalMap = document.querySelector(".modal-map");
 var modalContact = document.querySelector(".modal-contact");
+var modalSuccess = document.querySelector(".modal-success");
 
 // Поля ввода
 var feedbackForm = document.querySelector(".form-contact");
@@ -24,98 +26,108 @@ var storageEmail = "";
 
 // Закрываем модальное окно
 for (i = 0; i < closeButton.length; i++) {
-  closeButton[i].addEventListener("click", function(evt) {
+  closeButton[i].addEventListener("click", function (evt) {
     evt.preventDefault();
 
-    if (overlay.classList.contains("modal-show")) {
+    if (overlay && overlay.classList.contains("modal-show")) {
       overlay.classList.remove("modal-show")
     }
 
-    if (modalMap.classList.contains("modal-show")) {
+    if (modalMap && modalMap.classList.contains("modal-show")) {
       modalMap.classList.remove("modal-show");
     }
 
-    if (modalContact.classList.contains("modal-show")) {
+    if (modalContact && modalContact.classList.contains("modal-show")) {
       modalContact.classList.remove("modal-show");
+    }
+
+    if (modalSuccess && modalSuccess.classList.contains("modal-show")) {
+      modalSuccess.classList.remove("modal-show");
     }
   });
 }
 
 // Показываем карту проезда
-mapImg.addEventListener("click", function(evt) {
-  evt.preventDefault();
-  overlay.classList.add("modal-show");
-  modalMap.classList.add("modal-show");
-});
+if (mapImg) {
+  mapImg.addEventListener("click", function (evt) {
+    evt.preventDefault();
+    overlay.classList.add("modal-show");
+    modalMap.classList.add("modal-show");
+  });
+}
 
 // Показываем форму обратной связи
-feedbackButton.addEventListener("click", function(evt) {
-  evt.preventDefault();
+if (feedbackButton) {
+  feedbackButton.addEventListener("click", function (evt) {
+    evt.preventDefault();
 
-  try {
-    storageName = localStorage.getItem("name");
-    storageEmail = localStorage.getItem("email");
-  } catch (err) {
-    isStorageSupport = false;
-  }
+    try {
+      storageName = localStorage.getItem("name");
+      storageEmail = localStorage.getItem("email");
+    } catch (err) {
+      isStorageSupport = false;
+    }
 
-  overlay.classList.add("modal-show");
-  modalContact.classList.add("modal-show");
+    overlay.classList.add("modal-show");
+    modalContact.classList.add("modal-show");
 
-  if (isStorageSupport) {
-    inputName.value = storageName;
-    inputEmail.value = storageEmail;
-  }
+    if (isStorageSupport) {
+      inputName.value = storageName;
+      inputEmail.value = storageEmail;
+    }
 
-  if (!inputName.value && !inputEmail.value && !inputText.value) {
-    inputName.focus();
-  } else if (!inputEmail.value && !inputText.value) {
-    inputEmail.focus();
-  } else {
-    inputText.focus();
-  }
-});
+    if (!inputName.value && !inputEmail.value && !inputText.value) {
+      inputName.focus();
+    } else if (!inputEmail.value && !inputText.value) {
+      inputEmail.focus();
+    } else {
+      inputText.focus();
+    }
+  });
+}
 
 // Отправляем данные из формы
-feedbackForm.addEventListener("submit", function (evt) {
-  if (!inputName.value) {
-    evt.preventDefault();
-    inputName.classList.remove("error");
-    inputName.offsetWidth = inputName.offsetWidth;
-    inputName.classList.add("error");
-    inputName.placeholder = "Это поле обязательно для ввода";
-  } else {
-    inputName.classList.remove("error");
-    localStorage.setItem("name", inputName.value);
-  }
+if (feedbackForm) {
+  feedbackForm.addEventListener("submit", function (evt) {
+    if (!inputName.value) {
+      evt.preventDefault();
+      inputName.classList.remove("error");
+      inputName.offsetWidth = inputName.offsetWidth;
+      inputName.classList.add("error");
+      inputName.placeholder = "Это поле обязательно для ввода";
+    } else {
+      inputName.classList.remove("error");
+      localStorage.setItem("name", inputName.value);
+    }
 
-  if (!inputEmail.value) {
-    evt.preventDefault();
-    inputEmail.classList.remove("error");
-    inputEmail.offsetWidth = inputName.offsetWidth;
-    inputEmail.classList.add("error");
-    inputEmail.placeholder = "Это поле обязательно для ввода";
-  } else {
-    inputEmail.classList.remove("error");
-    localStorage.setItem("email", inputEmail.value);
-  }
+    if (!inputEmail.value) {
+      evt.preventDefault();
+      inputEmail.classList.remove("error");
+      inputEmail.offsetWidth = inputName.offsetWidth;
+      inputEmail.classList.add("error");
+      inputEmail.placeholder = "Это поле обязательно для ввода";
+    } else {
+      inputEmail.classList.remove("error");
+      localStorage.setItem("email", inputEmail.value);
+    }
 
-  if (!inputText.value) {
-    evt.preventDefault();
-    inputText.classList.remove("error");
-    inputText.offsetWidth = inputName.offsetWidth;
-    inputText.classList.add("error");
-    inputText.placeholder = "Это поле обязательно для ввода";
-  }
+    if (!inputText.value) {
+      evt.preventDefault();
+      inputText.classList.remove("error");
+      inputText.offsetWidth = inputName.offsetWidth;
+      inputText.classList.add("error");
+      inputText.placeholder = "Это поле обязательно для ввода";
+    }
 
-  if (!inputName.value && !inputEmail.value && !inputText.value) {
-    inputName.focus();
-  } else if (!inputEmail.value && !inputText.value) {
-    inputEmail.focus();
-  } else {
-    inputText.focus();
-  }
-});
+    if (!inputName.value && !inputEmail.value && !inputText.value) {
+      inputName.focus();
+    } else if (!inputEmail.value && !inputText.value) {
+      inputEmail.focus();
+    } else {
+      inputText.focus();
+    }
+  });
+}
 
 // Закрытие модальных окон через клавишу Esc
 window.addEventListener("keydown", function (evt) {
@@ -123,14 +135,28 @@ window.addEventListener("keydown", function (evt) {
     evt.preventDefault();
 
     for (i = 0; i < modal.length; i++) {
-      if (modal[i].classList.contains("modal-show") && overlay.classList.contains("modal-show")) {
-        console.log("sdggsd");
-        overlay.classList.remove("modal-show");
+      if (modal[i].classList.contains("modal-show")) {
         modal[i].classList.remove("modal-show");
+      }
+
+      if (overlay.classList.contains("modal-show")) {
+        overlay.classList.remove("modal-show");
       }
     }
   }
 });
+
+// Добавляем товар в корзину
+for (i = 0; i < addСart.length; i++) {
+  addСart[i].addEventListener("click", function (evt) {
+    evt.preventDefault();
+    if (modalSuccess.classList.contains("modal-show")) {
+      modalSuccess.classList.remove("modal-show");
+    } else {
+      modalSuccess.classList.add("modal-show");
+    }
+  });
+}
 
 ymaps.ready(function () {
   var myMap = new ymaps.Map('map', {
@@ -160,3 +186,4 @@ ymaps.ready(function () {
   myMap.geoObjects
     .add(myPlacemark);
 });
+
