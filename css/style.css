@@ -1146,10 +1146,6 @@ a {
   background-color: transparent;
 }
 
-.popular-price:hover .title {
-  text-decoration: underline;
-}
-
 .popular-price .old-price,
 .popular-price .new-price {
   display: block;
